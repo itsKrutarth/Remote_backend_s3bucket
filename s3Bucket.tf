@@ -6,7 +6,7 @@ resource "random_string" "randstr" {
 }
 
 resource "aws_s3_bucket" "s3bucket" {
-  bucket = "tf_bucket_backend_prov_${random_string.randstr.result}"
+  bucket = "tf-bucket-backend-prov-${random_string.randstr.result}"
   lifecycle {
     prevent_destroy = false
   }
